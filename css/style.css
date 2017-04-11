@@ -1,0 +1,166 @@
+@font-face {
+  font-family: 'Antro_Vectra';
+  src:url('../font/Antro_Vectra.otf');
+}
+
+@font-face {
+  font-family: 'NightWindSentSample';
+  src:url('../font/NightWindSentSample.otf');
+}
+
+*{
+  margin: 0;
+  padding: 0;
+  line-height: 0.8em;
+}
+
+html, body{
+  height: 100%;
+  width: 100%;
+  color: white;
+}
+
+h2, h3, h4, h5, h6{
+  padding: 2% 3%;
+}
+
+/****** LE CAROUSEL ******/
+.container {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  -webkit-perspective: 1000px;
+       -o-perspective: 1000px;
+          perspective: 1000px;
+  overflow: hidden;
+}
+
+
+#carousel {
+  position: absolute;
+  height: 90%;
+  width: 80%;
+  top: 5%;
+  left: 10%;
+  -webkit-transform-style: preserve-3d;
+          transform-style: preserve-3d;
+}
+
+.ready #carousel {
+  -webkit-transition: -webkit-transform 1s;
+          transition: -webkit-transform 1s;
+          transition: transform 1s, -webkit-transform 1s;
+          transition: transform 1s;
+}
+
+#carousel figure {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  display: block;
+  line-height: 116px;
+  font-size: 80px;
+  font-weight: bold;
+  color: white;
+}
+
+.ready #carousel figure {
+  -webkit-transition: opacity 1s, -webkit-transform 1s;
+          transition: opacity 1s, -webkit-transform 1s;
+          transition: opacity 1s, transform 1s;
+          transition: opacity 1s, transform 1s, -webkit-transform 1s;
+}
+
+figure {
+  margin: 0;
+}
+
+/****** LES BOUTONS DE NAVIGATION ******/
+button{
+  position: fixed;
+  height: 55%;
+  width: 5vw;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  border-radius: 6px;
+  border: none;
+  background-color: rgba(0, 0, 0, 0.65);
+  z-index: 3
+}
+
+button:nth-of-type(1){
+  border-radius: 80% 6px 6px 80%;
+  -webkit-transform: translate(-150%);
+          transform: translate(-150%);
+}
+
+button:nth-of-type(2){
+  border-radius: 6px 80% 80% 6px;
+  -webkit-transform: translate(50%);
+          transform: translate(50%);
+}
+
+
+
+/******************************************************/
+/******************************************************/
+/****** FIGURE 1 : ACCUEIL ****************************/
+/******************************************************/
+/******************************************************/
+figure:nth-of-type(1){
+  background-color: rgba(200, 200, 200, 0.65) !important;
+}
+
+
+
+/******************************************************/
+/******************************************************/
+/****** FIGURE 2 : ABOUT ME ****************************/
+/******************************************************/
+/******************************************************/
+figure:nth-of-type(2) > div:nth-of-type(2){
+  height: auto;
+  margin-top: 5%;
+  background-color: rgba(255, 255, 255, 0.65);
+}
+
+figure:nth-of-type(2) > div:nth-of-type(2) p{
+  font-family: 'NightWindSentSample';
+  font-size: 24px;
+  color: #003366;
+  line-height: 24px;
+  padding: 2% 2%;
+  text-shadow: 1px 1px #C5C5C5;
+}
+
+
+
+/******************************************************/
+/******************************************************/
+/****** FIGURE 3 : SKILLS ****************************/
+/******************************************************/
+/******************************************************/
+figure:nth-of-type(3) canvas{
+  position: absolute;
+  top: 3%;
+  margin-left: 30%;
+}
+
+/******************************************************/
+/******************************************************/
+/****** FIGURE 4 : PROJECTS ****************************/
+/******************************************************/
+/******************************************************/
+figure:nth-of-type(4) > div:nth-of-type(2){
+  max-height: 60%;
+  margin-top: 5%;
+  overflow-y: scroll;
+  border: 1px solid red;
+}
+
+figure:nth-of-type(4) > div:nth-of-type(2) img{
+  height: auto;
+  width: 100%;
+}
